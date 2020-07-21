@@ -1,3 +1,41 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+
+#header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  z-index: 1;
+
+  & .name-header-left {
+    display: grid;
+    justify-content: start;
+    padding-left: 10%;
+  }
+
+  & .name-header-right {
+    display: grid;
+    align-items: center;
+    justify-self: end;
+    grid-template-columns: repeat(3, max-content);
+    gap: 50px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
