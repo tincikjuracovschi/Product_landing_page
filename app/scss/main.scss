@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 0px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -21,6 +21,7 @@
   }
 
   & .nav-box {
+    width: 100%;
     display: grid;
     align-items: center;
     justify-content: end;
@@ -47,6 +48,9 @@
       width: 100%;
 
       & .label_email_input {
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
         display: inline-block;
         margin-bottom: 0px;
       }
@@ -102,4 +106,26 @@ button:focus {
 
 input {
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, max-content);
+    max-height: 110px;
+    gap: 5px;
+
+    & .name-header-left {
+      display: inline-block;
+      padding-right: 40px;
+    }
+
+    & .nav-box {
+      justify-content: center;
+    }
+  }
+
+  #main {
+    top: 80px;
+  }
 }
