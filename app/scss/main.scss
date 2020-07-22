@@ -41,9 +41,35 @@
 
     & #form {
       display: grid;
-      grid-template-rows: 1fr 25px 30px;
+      grid-template-rows: 1fr 25px 1fr;
       justify-items: center;
       gap: 10px;
+      width: 100%;
+
+      & .label_email_input {
+        display: inline-block;
+        margin-bottom: 0px;
+      }
+
+      & .form-submit-button {
+        margin-top: 10px;
+        background-color: #fc0;
+        border: none;
+        padding: 0px 30px 0px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+      }
+
+      & .form-submit-button:hover {
+        background-color: orange;
+      }
+
+      & .email_input_div {
+        min-width: 300px;
+      }
     }
   }
 }
@@ -70,21 +96,10 @@ img {
   margin: 0 auto;
 }
 
-input[type="submit"] {
-  background-color: #fc0;
-  border: none;
-  padding: 0px 30px 0px 30px;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
-  color: black;
+button:focus {
+  outline: 0;
 }
 
-input[type="submit"]:hover {
-  background-color: orange;
-}
-
-input[type="email"] {
-  width: 300px;
+input {
+  width: 100%;
 }
