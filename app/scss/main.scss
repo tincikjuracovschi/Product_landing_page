@@ -7,11 +7,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 0px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   z-index: 1;
+  max-height: 70px;
 
   & .name-header-left {
     display: grid;
@@ -20,12 +21,60 @@
   }
 
   & .nav-box {
+    width: 100%;
     display: grid;
     align-items: center;
     justify-content: end;
     grid-template-columns: repeat(3, max-content);
     gap: 50px;
     margin-right: 20px;
+  }
+}
+
+#main {
+  position: relative;
+  top: 70px;
+
+  & .get_started {
+    display: grid;
+    justify-items: center;
+    padding: 50px 0px;
+
+    & #form {
+      display: grid;
+      grid-template-rows: 1fr 25px 1fr;
+      justify-items: center;
+      gap: 10px;
+      width: 100%;
+
+      & .label_email_input {
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        display: inline-block;
+        margin-bottom: 0px;
+      }
+
+      & .form-submit-button {
+        margin-top: 10px;
+        background-color: #fc0;
+        border: none;
+        padding: 0px 30px 0px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+      }
+
+      & .form-submit-button:hover {
+        background-color: orange;
+      }
+
+      & .email_input_div {
+        min-width: 300px;
+      }
+    }
   }
 }
 
@@ -49,4 +98,34 @@ img {
   width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+button:focus {
+  outline: 0;
+}
+
+input {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, max-content);
+    max-height: 110px;
+    gap: 5px;
+
+    & .name-header-left {
+      display: inline-block;
+      padding-right: 40px;
+    }
+
+    & .nav-box {
+      justify-content: center;
+    }
+  }
+
+  #main {
+    top: 80px;
+  }
 }
