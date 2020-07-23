@@ -2,6 +2,11 @@
 @import "fonts";
 @import "libs";
 
+body {
+  background-color: #eee;
+  margin: 0;
+}
+
 #header {
   overflow: hidden;
   position: fixed;
@@ -12,7 +17,8 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   z-index: 1;
-  max-height: 70px;
+  max-height: 90px;
+  background-color: #eee;
 
   & .name-header-left {
     display: grid;
@@ -27,7 +33,7 @@
     justify-content: end;
     grid-template-columns: repeat(3, max-content);
     gap: 50px;
-    margin-right: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -55,26 +61,98 @@
         margin-bottom: 0px;
       }
 
-      & .form-submit-button {
-        margin-top: 10px;
-        background-color: #fc0;
-        border: none;
-        padding: 0px 30px 0px 30px;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 700;
-        color: black;
-      }
-
-      & .form-submit-button:hover {
-        background-color: orange;
-      }
-
       & .email_input_div {
         min-width: 300px;
       }
     }
+  }
+
+  & .options {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 30px;
+
+    & .container_information {
+      display: grid;
+      grid-template-columns: 2fr 8fr;
+      margin: 20px;
+
+      & .icon {
+        display: grid;
+        justify-items: center;
+      }
+
+      & .information {
+        & .information_text {
+          font-size: 25px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  & #video_box {
+    display: grid;
+    justify-items: center;
+    min-height: 300px;
+    margin: 10px;
+  }
+
+  & #price_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+
+    & .box {
+      border: 1px solid black;
+      margin: 20px;
+
+      & .name_box {
+        background-color: #ddd;
+        font-size: 18px;
+        font-weight: 700;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      & .description_box {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+
+        & section.price {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  position: relative;
+  top: 70px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: end;
+
+  & .div_links {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+
+    & .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  & .copyright {
+    padding-right: 20px;
   }
 }
 
@@ -108,6 +186,26 @@ input {
   width: 100%;
 }
 
+iframe {
+  width: 70%;
+}
+
+.form-submit-button {
+  margin-top: 10px;
+  background-color: #fc0;
+  border: none;
+  padding: 0px 30px 0px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+
+.form-submit-button:hover {
+  background-color: orange;
+}
+
 @media screen and (max-width: 600px) {
   #header {
     grid-template-columns: none;
@@ -121,11 +219,40 @@ input {
     }
 
     & .nav-box {
-      justify-content: center;
+      padding-left: 10px;
     }
   }
 
   #main {
     top: 80px;
+
+    & #price_box {
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin: 5px;
+    }
   }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #main {
+    & #price_box {
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin: 5px;
+    }
+  }
+}
+
+.fa-truck,
+.fa-battery-full,
+.fa-fire::before {
+  color: orange;
+  font-size: 50px;
 }
