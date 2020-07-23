@@ -26,7 +26,10 @@
     <!-- Custom Browsers Color Start -->
     <meta name="theme-color" content="#000" />
     <!-- Custom Browsers Color End -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
 
@@ -41,14 +44,14 @@
       </div>
       <nav id="nav-bar">
         <ul class="nav-box">
-          <li class="nav-link">
-            <a href="#">Features</a>
+          <li>
+            <a class="nav-link" href="#list_options">Features</a>
           </li>
-          <li class="nav-link">
-            <a href="#">How It Works</a>
+          <li>
+            <a class="nav-link" href="#video_box">How It Works</a>
           </li>
-          <li class="nav-link">
-            <a href="#">Pricing</a>
+          <li>
+            <a class="nav-link" href="#price_box">Pricing</a>
           </li>
         </ul>
       </nav>
@@ -67,7 +70,108 @@
           </button>
         </form>
       </div>
+      <div id="list_options" class="options">
+        <div class="container_information">
+          <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+          <div class="information">
+            <div class="information_text">Premium Materials</div>
+            <section>
+              Our trombones use the shiniest brass which is sourced locally.
+              This will increase the longevity of your purchase.
+            </section>
+          </div>
+        </div>
+        <div class="container_information">
+          <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+          <div class="information">
+            <div class="information_text">Fast Shipping</div>
+            <section>
+              We make sure you recieve your trombone as soon as we have finished
+              making it. We also provide free returns if you are not satisfied.
+            </section>
+          </div>
+        </div>
+        <div class="container_information">
+          <div class="icon"><i class="fa fa-3x fa-battery-full"></i></div>
+          <div class="information">
+            <div class="information_text">Quality Assurance</div>
+            <section>
+              For every purchase you make, we will ensure there are no damages
+              or faults and we will check and test the pitch of your instrument.
+            </section>
+          </div>
+        </div>
+      </div>
+      <div id="video_box">
+        <iframe
+          src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div id="price_box">
+        <div class="box">
+          <div class="name_box">TENOR TROMBONE</div>
+          <div class="description_box">
+            <section class="price">$600</section>
+            <section>Lorem ipsum.</section>
+            <section>Lorem ipsum.</section>
+            <section>Lorem ipsum dolor.</section>
+            <section>Lorem ipsum.</section>
+            <button class="form-submit-button" type="submit" name="submit">
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="name_box">BASS TROMBONE</div>
+          <div class="description_box">
+            <section class="price">$900</section>
+            <section>Lorem ipsum.</section>
+            <section>Lorem ipsum.</section>
+            <section>Lorem ipsum dolor.</section>
+            <section>Lorem ipsum.</section>
+            <button class="form-submit-button" type="submit" name="submit">
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="name_box">VALVE TROMBONE</div>
+          <div class="description_box">
+            <section class="price">$1200</section>
+            <section>Plays similar to a Trumpet</section>
+            <section>Great for Jazz Bands</section>
+            <section>Lorem ipsum dolor.</section>
+            <section>Lorem ipsum.</section>
+            <button class="form-submit-button" type="submit" name="submit">
+              SELECT
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
+    <footer id="footer">
+      <div class="footer_box">
+        <div class="div_links">
+          <ul class="links">
+            <li>
+              <a href="#">Privacy</a>
+            </li>
+            <li>
+              <a href="#">Terms</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>Copyright 2020, Juracovschi Cristina</p>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
