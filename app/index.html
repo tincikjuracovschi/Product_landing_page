@@ -58,16 +58,28 @@
     </header>
     <main id="main">
       <div class="get_started">
-        <form id="form" action="#">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
           <label class="label_email_input" for="email_input">
             Handcrafted home-made masterpieces
           </label>
           <div class="email_input_div">
-            <input type="email" name="email_input" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
           </div>
-          <button class="form-submit-button" type="submit" name="submit">
-            GET STARTED
-          </button>
+          <div>
+            <input
+              class="form-submit-button"
+              type="submit"
+              name="submit"
+              id="submit"
+              value=" GET STARTED"
+            />
+          </div>
         </form>
       </div>
       <div id="list_options" class="options">
